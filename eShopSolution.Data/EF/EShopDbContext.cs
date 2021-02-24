@@ -78,5 +78,54 @@ namespace eShopSolution.Data.EF
         public DbSet<ProductImage> ProductImages { get; set; }
 
         public DbSet<Slide> Slides { get; set; }
+
+        public DbSet<DanhMucHangHoa> DanhMucHangHoas { get; set; }
+
+        public DbSet<DanhMucChungLoai> DanhMucChungLoais { get; set; }
+
+        public DbSet<DanhMucDoDay> DanhMucDoDays { get; set; }
+
+        public DbSet<DanhMucDonViTrucThuoc> DanhMucDonViTrucThuocs { get; set; }
+
+        public DbSet<DanhMucHinhThucTT> DanhMucHinhThucTTs { get; set; }
+
+        public DbSet<DanhMucHopDong> DanhMucHopDongs { get; set; }
+
+        public DbSet<DanhMucKhoanChi> DanhMucKhoanChis { get; set; }
+
+        public DbSet<DanhMucKhoanThu> DanhMucKhoanThus { get; set; }
+
+        public DbSet<DanhMucKhoVatTu> DanhMucKhoVatTus { get; set; }
+
+        public DbSet<DanhMucKhuVuc> DanhMucKhuVucs { get; set; }
+
+        public DbSet<DanhMucKieuSong> DanhMucKieuSongs { get; set; }
+
+        public DbSet<DanhMucLoaiNhapXuat> DanhMucLoaiNhapXuats { get; set; }
+
+        public DbSet<DanhMucLoaiTien> DanhMucLoaiTiens { get; set; }
+
+        public DbSet<DanhMucLoaiTon> DanhMucLoaiTons { get; set; }
+
+        public DbSet<DanhMucLyDoNhapXuat> DanhMucLyDoNhapXuats { get; set; }
+        
+        public DbSet<DanhMucLyDoThuChi> DanhMucLyDoThuChis { get; set; }
+        
+        public DbSet<DanhMucMauSac> DanhMucMauSacs { get; set; }
+        
+        public DbSet<DanhMucNhomDonVi> DanhMucNhomDonVis { get; set; }
+        
+        public DbSet<DanhMucNhomDonViCap2> DanhMucNhomDonViCap2s { get; set; }
+        
+        public DbSet<DanhMucNhomVatTu> DanhMucNhomVatTus { get; set; }
+        
+        public DbSet<DanhMucNhomVatTuCap2> DanhMucNhomVatTuCap2s { get; set; }
+        
+        public DbSet<DanhMucSoChungTu> DanhMucSoChungTus { get; set; }
+        
+        public DbSet<DanhMucTenDonVi> DanhMucTenDonVis { get; set; }
+
+
+
     }
 }
