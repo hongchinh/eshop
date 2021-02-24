@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.HangHoa
+namespace eShopSolution.ViewModels.DanhMuc.HangHoas
 {
     public class HangHoaVm
     {

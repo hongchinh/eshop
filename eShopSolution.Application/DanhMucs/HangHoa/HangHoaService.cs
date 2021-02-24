@@ -1,23 +1,15 @@
 ﻿using eShopSolution.Application.Common;
 using eShopSolution.Data.EF;
 using eShopSolution.Data.Entities;
-using eShopSolution.Utilities.Constants;
 using eShopSolution.Utilities.Exceptions;
-using eShopSolution.ViewModels.Catalog.ProductImages;
-using eShopSolution.ViewModels.Catalog.Products;
 using eShopSolution.ViewModels.Common;
-using eShopSolution.ViewModels.DanhMuc.HangHoa;
-using Microsoft.AspNetCore.Http;
+using eShopSolution.ViewModels.DanhMuc.HangHoas;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.Catalog.Products
+namespace eShopSolution.Application.DanhMuc.HangHoas
 {
     public class HangHoaService : IHangHoaService
     {
