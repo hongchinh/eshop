@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace eShopSolution.BackendApi.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class HangHoasController : Controller
     {
         private readonly IHangHoaService _hangHoaService;
@@ -15,7 +17,7 @@ namespace eShopSolution.BackendApi.Controllers
             _hangHoaService = hangHoaService;
         }
 
-        [HttpGet]
+        [HttpGet("paging")]
         public async Task<IActionResult> GetListPagging([FromQuery] GetHangHoaPagingRequest request)
         {
             var hanghoas = await _hangHoaService.GetAllPaging(request);

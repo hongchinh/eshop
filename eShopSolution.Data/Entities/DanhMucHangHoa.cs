@@ -22,7 +22,7 @@ namespace eShopSolution.Data.Entities
 
 		public string GhiChu { get; set; }
 
-		public bool Selected { get; set; }
+		public bool Selectted { get; set; }
 
 		public decimal TyLe { get; set; }
 
@@ -103,11 +103,11 @@ namespace eShopSolution.Data.Entities
 
 		public decimal SoluongMavach { get; set; }
 
-		public string NammXuatBan { get; set; }
+		public string NamXuatBan { get; set; }
 
 		public string MaHangHoaCu { get; set; }
 
-		public decimal ChieuKhau { get; set; }
+		public decimal ChietKhau { get; set; }
 
 		public string TenNhaCungCap { get; set; }
 

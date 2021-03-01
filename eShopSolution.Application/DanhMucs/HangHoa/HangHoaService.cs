@@ -76,9 +76,10 @@ namespace eShopSolution.Application.DanhMuc.HangHoas
             //1. Select join
             var query = from p in _context.DanhMucHangHoas
                         select new { p };
+                       
             //2. filter
             if (!string.IsNullOrEmpty(request.MaHangHoa))
-                query = query.Where(x => x.p.MaHangHoa.Contains(request.MaHangHoa));
+                query = query.Where(x => x.p .MaHangHoa.Contains(request.MaHangHoa));
 
             if (!string.IsNullOrEmpty(request.TenHangHoa))
                 query = query.Where(x => x.p.TenHangHoa.Contains(request.TenHangHoa));
@@ -88,6 +89,9 @@ namespace eShopSolution.Application.DanhMuc.HangHoas
 
             //3. Paging
             int totalRow = await query.CountAsync();
+
+           
+
 
             var data = await query.Skip((request.PageIndex - 1) * request.PageSize)
                 .Take(request.PageSize)
@@ -99,25 +103,12 @@ namespace eShopSolution.Application.DanhMuc.HangHoas
                     DonViTinh = x.p.DonViTinh,
                     MaNhomHang = x.p.MaNhomHang,
                     TenNhomHang = x.p.TenNhomHang,
+                    TyTrong =x.p.TyTrong,
                     QuyCach = x.p.QuyCach,
-                    TyTrong = x.p.TyTrong,
                     DonGia = x.p.DonGia,
                     GiaNhap = x.p.GiaNhap,
                     GiaXuat = x.p.GiaXuat,
-                    TyLeChietKhau = x.p.TyLeChietKhau,
-                    GiaBanLe = x.p.GiaBanLe,
-                    TyLeVat = x.p.TyLeVat,
-                    LoaiThue = x.p.LoaiThue,
-                    SoLuongToiThieu = x.p.SoLuongToiThieu,
-                    SoLuongToiDa = x.p.SoLuongToiDa,
-                    MaDonViSuDung = x.p.MaDonViSuDung,
-                    KhoRongTon = x.p.KhoRongTon,
-                    ChieuDai = x.p.ChieuDai,
-                    LoaiTon = x.p.LoaiTon,
-                    MauSac = x.p.MauSac,
-                    DoDay = x.p.DoDay,
-                    ChungLoai = x.p.ChungLoai,
-                    HangHoa = x.p.HangHoa,
+                     
                 }).ToListAsync();
 
             //4. Select and projection

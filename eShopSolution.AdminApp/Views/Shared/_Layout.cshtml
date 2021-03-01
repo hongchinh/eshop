@@ -35,6 +35,8 @@
                                 <a class="nav-link" asp-controller="User" asp-action="Create">Thêm mới</a>
                             </nav>
                         </div>
+
+
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                             Danh mục
@@ -51,6 +53,12 @@
                                         <a class="nav-link" asp-controller="Product" asp-action="Index">Danh sách</a>
                                     </nav>
                                 </div>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" asp-controller="HangHoa" asp-action="Index">Hàng hóa</a>
+                                    </nav>
+                                </div>
+
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
                                     Error
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>

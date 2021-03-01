@@ -30,8 +30,7 @@ namespace eShopSolution.AdminApp.Controllers
 
         public async Task<IActionResult> Index(string mahanghoa, string tenhanghoa, string donvitinh, int pageIndex = 1, int pageSize = 10)
         {
-            var languageId = HttpContext.Session.GetString(SystemConstants.AppSettings.DefaultLanguageId);
-
+           
             var request = new GetHangHoaPagingRequest()
             {
                 MaHangHoa = mahanghoa,
