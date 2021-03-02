@@ -1,9 +1,9 @@
-﻿using eShopSolution.ViewModels.Common;
+﻿using eSaleSolution.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.SoChungTus
+namespace eSaleSolution.ViewModels.DanhMuc.SoChungTus
 {
     public class SoChungTuUpdateRequest : BaseRequest
     {

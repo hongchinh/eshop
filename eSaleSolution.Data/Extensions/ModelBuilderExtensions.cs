@@ -1,21 +1,21 @@
-﻿using eShopSolution.Data.Entities;
-using eShopSolution.Data.Enums;
+﻿using eSaleSolution.Data.Entities;
+using eSaleSolution.Data.Enums;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.Data.Extensions
+namespace eSaleSolution.Data.Extensions
 {
     public static class ModelBuilderExtensions
     {
         public static void Seed(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<AppConfig>().HasData(
-               new AppConfig() { Key = "HomeTitle", Value = "This is home page of eShopSolution" },
-               new AppConfig() { Key = "HomeKeyword", Value = "This is keyword of eShopSolution" },
-               new AppConfig() { Key = "HomeDescription", Value = "This is description of eShopSolution" }
+               new AppConfig() { Key = "HomeTitle", Value = "This is home page of eSaleSolution" },
+               new AppConfig() { Key = "HomeKeyword", Value = "This is keyword of eSaleSolution" },
+               new AppConfig() { Key = "HomeDescription", Value = "This is description of eSaleSolution" }
                );
             modelBuilder.Entity<Language>().HasData(
                 new Language() { Id = "vi", Name = "Tiếng Việt", IsDefault = true },

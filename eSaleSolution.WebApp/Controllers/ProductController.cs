@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using eShopSolution.ApiIntegration;
-using eShopSolution.ViewModels.Catalog.Products;
-using eShopSolution.WebApp.Models;
+using eSaleSolution.ApiIntegration;
+using eSaleSolution.ViewModels.Catalog.Products;
+using eSaleSolution.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace eShopSolution.WebApp.Controllers
+namespace eSaleSolution.WebApp.Controllers
 {
     public class ProductController : Controller
     {

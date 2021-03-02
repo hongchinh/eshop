@@ -1,11 +1,11 @@
-﻿using eShopSolution.ViewModels.Catalog.ProductImages;
-using eShopSolution.ViewModels.Catalog.Products;
-using eShopSolution.ViewModels.Common;
+﻿using eSaleSolution.ViewModels.Catalog.ProductImages;
+using eSaleSolution.ViewModels.Catalog.Products;
+using eSaleSolution.ViewModels.Common;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.Catalog.Products
+namespace eSaleSolution.Application.Catalog.Products
 {
     public interface IProductService
     {

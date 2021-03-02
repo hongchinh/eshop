@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.TinhTrangs
+namespace eSaleSolution.ViewModels.DanhMuc.TinhTrangs
 {
     public class TinhTrangDeleteRequest
     {

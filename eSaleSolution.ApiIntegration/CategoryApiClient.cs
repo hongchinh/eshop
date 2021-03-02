@@ -1,6 +1,6 @@
-﻿using eShopSolution.ApiIntegration;
-using eShopSolution.ViewModels.Catalog.Categories;
-using eShopSolution.ViewModels.Common;
+﻿using eSaleSolution.ApiIntegration;
+using eSaleSolution.ViewModels.Catalog.Categories;
+using eSaleSolution.ViewModels.Common;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace eShopSolution.ApiIntegration
+namespace eSaleSolution.ApiIntegration
 {
     public class CategoryApiClient : BaseApiClient, ICategoryApiClient
     {

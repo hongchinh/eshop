@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.NhoDonVis
+namespace eSaleSolution.ViewModels.DanhMuc.NhoDonVis
 {
     public class NhoDonViDeleteRequest
     {

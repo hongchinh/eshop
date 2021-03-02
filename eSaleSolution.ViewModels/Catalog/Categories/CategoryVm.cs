@@ -1,4 +1,4 @@
-﻿namespace eShopSolution.ViewModels.Catalog.Categories
+﻿namespace eSaleSolution.ViewModels.Catalog.Categories
 {
     public class CategoryVm
     {

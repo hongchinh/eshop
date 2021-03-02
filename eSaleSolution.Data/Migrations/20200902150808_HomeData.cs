@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace eShopSolution.Data.Migrations
+namespace eSaleSolution.Data.Migrations
 {
     public partial class HomeData : Migration
     {

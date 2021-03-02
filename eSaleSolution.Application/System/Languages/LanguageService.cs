@@ -1,8 +1,8 @@
-﻿using eShopSolution.Data.EF;
-using eShopSolution.Data.Entities;
-using eShopSolution.ViewModels.Common;
-using eShopSolution.ViewModels.System.Languages;
-using eShopSolution.ViewModels.System.Users;
+﻿using eSaleSolution.Data.EF;
+using eSaleSolution.Data.Entities;
+using eSaleSolution.ViewModels.Common;
+using eSaleSolution.ViewModels.System.Languages;
+using eSaleSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -16,14 +16,14 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.System.Languages
+namespace eSaleSolution.Application.System.Languages
 {
     public class LanguageService : ILanguageService
     {
         private readonly IConfiguration _config;
-        private readonly EShopDbContext _context;
+        private readonly ESaleDbContext _context;
 
-        public LanguageService(EShopDbContext context,
+        public LanguageService(ESaleDbContext context,
             IConfiguration config)
         {
             _config = config;

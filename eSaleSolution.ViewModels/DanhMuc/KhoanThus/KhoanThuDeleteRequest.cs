@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.KhoanThus
+namespace eSaleSolution.ViewModels.DanhMuc.KhoanThus
 {
     public class KhoanThuDeleteRequest
     {

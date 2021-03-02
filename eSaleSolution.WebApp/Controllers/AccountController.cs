@@ -5,9 +5,9 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using eShopSolution.ApiIntegration;
-using eShopSolution.Utilities.Constants;
-using eShopSolution.ViewModels.System.Users;
+using eSaleSolution.ApiIntegration;
+using eSaleSolution.Utilities.Constants;
+using eSaleSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
@@ -16,7 +16,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
 
-namespace eShopSolution.WebApp.Controllers
+namespace eSaleSolution.WebApp.Controllers
 {
     public class AccountController : Controller
     {

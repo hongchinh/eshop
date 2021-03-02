@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace eShopSolution.BackendApi.Controllers
+namespace eSaleSolution.BackendApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

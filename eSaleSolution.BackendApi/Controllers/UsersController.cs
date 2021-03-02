@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
-using eShopSolution.Application.System.Users;
-using eShopSolution.ViewModels.System.Users;
+using eSaleSolution.Application.System.Users;
+using eSaleSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace eShopSolution.BackendApi.Controllers
+namespace eSaleSolution.BackendApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

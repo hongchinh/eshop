@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using eShopSolution.ApiIntegration;
-using eShopSolution.ViewModels.System.Users;
+using eSaleSolution.ApiIntegration;
+using eSaleSolution.ViewModels.System.Users;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -14,7 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace eShopSolution.AdminApp
+namespace eSaleSolution.AdminApp
 {
     public class Startup
     {

@@ -1,11 +1,11 @@
-﻿using eShopSolution.ViewModels.System.Languages;
+﻿using eSaleSolution.ViewModels.System.Languages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShopSolution.AdminApp.Models
+namespace eSaleSolution.AdminApp.Models
 {
     public class NavigationViewModel
     {

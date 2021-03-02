@@ -1,9 +1,9 @@
-﻿using eShopSolution.ViewModels.Common;
+﻿using eSaleSolution.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.TinhTrangs
+namespace eSaleSolution.ViewModels.DanhMuc.TinhTrangs
 {
     public class TinhTrangUpdateRequest : BaseRequest
     {

@@ -1,5 +1,5 @@
-﻿using eShopSolution.ViewModels.Common;
-using eShopSolution.ViewModels.System.Roles;
+﻿using eSaleSolution.ViewModels.Common;
+using eSaleSolution.ViewModels.System.Roles;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -10,7 +10,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace eShopSolution.ApiIntegration
+namespace eSaleSolution.ApiIntegration
 {
     public class RoleApiClient : IRoleApiClient
     {

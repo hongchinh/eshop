@@ -1,8 +1,8 @@
-﻿using eShopSolution.ViewModels.Utilities.Slides;
+﻿using eSaleSolution.ViewModels.Utilities.Slides;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace eShopSolution.ApiIntegration
+namespace eSaleSolution.ApiIntegration
 {
     public interface ISlideApiClient
     {

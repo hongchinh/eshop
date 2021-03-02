@@ -1,10 +1,10 @@
-﻿using eShopSolution.Application.DanhMuc.HangHoas;
-using eShopSolution.ViewModels.DanhMuc.HangHoas;
+﻿using eSaleSolution.Application.DanhMuc.HangHoas;
+using eSaleSolution.ViewModels.DanhMuc.HangHoas;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace eShopSolution.BackendApi.Controllers
+namespace eSaleSolution.BackendApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

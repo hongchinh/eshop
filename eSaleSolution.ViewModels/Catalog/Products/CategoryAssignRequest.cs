@@ -1,7 +1,7 @@
-﻿using eShopSolution.ViewModels.Common;
+﻿using eSaleSolution.ViewModels.Common;
 using System.Collections.Generic;
 
-namespace eShopSolution.ViewModels.Catalog.Products
+namespace eSaleSolution.ViewModels.Catalog.Products
 {
     public class CategoryAssignRequest
     {

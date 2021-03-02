@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.DonVis
+namespace eSaleSolution.ViewModels.DanhMuc.DonVis
 {
     public class DonViDeleteRequest
     {

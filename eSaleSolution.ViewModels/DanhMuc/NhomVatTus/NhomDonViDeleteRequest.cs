@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.NhomVatTus
+namespace eSaleSolution.ViewModels.DanhMuc.NhomVatTus
 {
     public class NhomVatTuDeleteRequest
     {

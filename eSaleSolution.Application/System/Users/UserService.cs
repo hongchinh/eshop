@@ -1,6 +1,6 @@
-﻿using eShopSolution.Data.Entities;
-using eShopSolution.ViewModels.Common;
-using eShopSolution.ViewModels.System.Users;
+﻿using eSaleSolution.Data.Entities;
+using eSaleSolution.ViewModels.Common;
+using eSaleSolution.ViewModels.System.Users;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +13,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.System.Users
+namespace eSaleSolution.Application.System.Users
 {
     public class UserService : IUserService
     {

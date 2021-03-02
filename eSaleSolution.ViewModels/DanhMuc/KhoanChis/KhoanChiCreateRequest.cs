@@ -1,9 +1,9 @@
-﻿using eShopSolution.ViewModels.Common;
+﻿using eSaleSolution.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.DonVis
+namespace eSaleSolution.ViewModels.DanhMuc.DonVis
 {
     public class KhoanChiCreateRequest : BaseRequest
     {

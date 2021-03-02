@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
-using eShopSolution.ApiIntegration;
-using eShopSolution.ViewModels.System.Users;
-using eShopSolution.WebApp.LocalizationResources;
+using eSaleSolution.ApiIntegration;
+using eSaleSolution.ViewModels.System.Users;
+using eSaleSolution.WebApp.LocalizationResources;
 using FluentValidation.AspNetCore;
 using LazZiya.ExpressLocalization;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -18,7 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace eShopSolution.WebApp
+namespace eSaleSolution.WebApp
 {
     public class Startup
     {

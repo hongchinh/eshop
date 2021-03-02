@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.DoDays
+namespace eSaleSolution.ViewModels.DanhMuc.DoDays
 {
     public class DoDayDeleteRequest
     {

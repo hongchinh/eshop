@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace eShopSolution.AdminApp.Controllers
+namespace eSaleSolution.AdminApp.Controllers
 {
     [Authorize]
     public class BaseController : Controller

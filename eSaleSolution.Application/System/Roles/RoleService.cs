@@ -1,5 +1,5 @@
-﻿using eShopSolution.Data.Entities;
-using eShopSolution.ViewModels.System.Roles;
+﻿using eSaleSolution.Data.Entities;
+using eSaleSolution.ViewModels.System.Roles;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.System.Roles
+namespace eSaleSolution.Application.System.Roles
 {
     public class RoleService : IRoleService
     {

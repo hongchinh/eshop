@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "eShopSolution.WebApp": {
+    "eSaleSolution.WebApp": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:5003",

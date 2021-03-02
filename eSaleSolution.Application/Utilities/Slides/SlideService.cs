@@ -1,8 +1,8 @@
-﻿using eShopSolution.Application.System.Roles;
-using eShopSolution.Data.EF;
-using eShopSolution.Data.Entities;
-using eShopSolution.ViewModels.System.Roles;
-using eShopSolution.ViewModels.Utilities.Slides;
+﻿using eSaleSolution.Application.System.Roles;
+using eSaleSolution.Data.EF;
+using eSaleSolution.Data.Entities;
+using eSaleSolution.ViewModels.System.Roles;
+using eSaleSolution.ViewModels.Utilities.Slides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,13 +11,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.Utilities.Slides
+namespace eSaleSolution.Application.Utilities.Slides
 {
     public class SlideService : ISlideService
     {
-        private readonly EShopDbContext _context;
+        private readonly ESaleDbContext _context;
 
-        public SlideService(EShopDbContext context)
+        public SlideService(ESaleDbContext context)
         {
             _context = context;
         }

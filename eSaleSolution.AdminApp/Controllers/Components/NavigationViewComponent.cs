@@ -1,13 +1,13 @@
-﻿using eShopSolution.AdminApp.Models;
-using eShopSolution.ApiIntegration;
-using eShopSolution.Utilities.Constants;
+﻿using eSaleSolution.AdminApp.Models;
+using eSaleSolution.ApiIntegration;
+using eSaleSolution.Utilities.Constants;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShopSolution.AdminApp.Controllers.Components
+namespace eSaleSolution.AdminApp.Controllers.Components
 {
     public class NavigationViewComponent : ViewComponent
     {

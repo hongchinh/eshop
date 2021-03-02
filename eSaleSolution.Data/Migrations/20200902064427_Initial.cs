@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace eShopSolution.Data.Migrations
+namespace eSaleSolution.Data.Migrations
 {
     public partial class Initial : Migration
     {
@@ -439,9 +439,9 @@ namespace eShopSolution.Data.Migrations
                 columns: new[] { "Key", "Value" },
                 values: new object[,]
                 {
-                    { "HomeTitle", "This is home page of eShopSolution" },
-                    { "HomeKeyword", "This is keyword of eShopSolution" },
-                    { "HomeDescription", "This is description of eShopSolution" }
+                    { "HomeTitle", "This is home page of eSaleSolution" },
+                    { "HomeKeyword", "This is keyword of eSaleSolution" },
+                    { "HomeDescription", "This is description of eSaleSolution" }
                 });
 
             migrationBuilder.InsertData(

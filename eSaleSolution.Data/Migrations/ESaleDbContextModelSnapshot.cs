@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using eShopSolution.Data.EF;
+using eSaleSolution.Data.EF;
 
-namespace eShopSolution.Data.Migrations
+namespace eSaleSolution.Data.Migrations
 {
-    [DbContext(typeof(EShopDbContext))]
-    partial class EShopDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ESaleDbContext))]
+    partial class ESaleDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -121,7 +121,7 @@ namespace eShopSolution.Data.Migrations
                     b.ToTable("AppUserTokens");
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.AppConfig", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.AppConfig", b =>
                 {
                     b.Property<string>("Key")
                         .HasColumnType("nvarchar(450)");
@@ -138,21 +138,21 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Key = "HomeTitle",
-                            Value = "This is home page of eShopSolution"
+                            Value = "This is home page of eSaleSolution"
                         },
                         new
                         {
                             Key = "HomeKeyword",
-                            Value = "This is keyword of eShopSolution"
+                            Value = "This is keyword of eSaleSolution"
                         },
                         new
                         {
                             Key = "HomeDescription",
-                            Value = "This is description of eShopSolution"
+                            Value = "This is description of eSaleSolution"
                         });
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.AppRole", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.AppRole", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -187,7 +187,7 @@ namespace eShopSolution.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.AppUser", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.AppUser", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -274,7 +274,7 @@ namespace eShopSolution.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Cart", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Cart", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -307,7 +307,7 @@ namespace eShopSolution.Data.Migrations
                     b.ToTable("Carts");
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Category", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -351,7 +351,7 @@ namespace eShopSolution.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.CategoryTranslation", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.CategoryTranslation", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -438,7 +438,7 @@ namespace eShopSolution.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Contact", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Contact", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -474,7 +474,7 @@ namespace eShopSolution.Data.Migrations
                     b.ToTable("Contacts");
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Language", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Language", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(5)")
@@ -508,7 +508,7 @@ namespace eShopSolution.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Order", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Order", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -554,7 +554,7 @@ namespace eShopSolution.Data.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.OrderDetail", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.OrderDetail", b =>
                 {
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
@@ -575,7 +575,7 @@ namespace eShopSolution.Data.Migrations
                     b.ToTable("OrderDetails");
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Product", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -622,7 +622,7 @@ namespace eShopSolution.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.ProductImage", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.ProductImage", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -662,7 +662,7 @@ namespace eShopSolution.Data.Migrations
                     b.ToTable("ProductImages");
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.ProductInCategory", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.ProductInCategory", b =>
                 {
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
@@ -684,7 +684,7 @@ namespace eShopSolution.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.ProductTranslation", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.ProductTranslation", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -760,7 +760,7 @@ namespace eShopSolution.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Promotion", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Promotion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -802,7 +802,7 @@ namespace eShopSolution.Data.Migrations
                     b.ToTable("Promotions");
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Slide", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Slide", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -904,7 +904,7 @@ namespace eShopSolution.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Transaction", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Transaction", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -947,102 +947,102 @@ namespace eShopSolution.Data.Migrations
                     b.ToTable("Transactions");
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Cart", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Cart", b =>
                 {
-                    b.HasOne("eShopSolution.Data.Entities.Product", "Product")
+                    b.HasOne("eSaleSolution.Data.Entities.Product", "Product")
                         .WithMany("Carts")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("eShopSolution.Data.Entities.AppUser", "AppUser")
+                    b.HasOne("eSaleSolution.Data.Entities.AppUser", "AppUser")
                         .WithMany("Carts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.CategoryTranslation", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.CategoryTranslation", b =>
                 {
-                    b.HasOne("eShopSolution.Data.Entities.Category", "Category")
+                    b.HasOne("eSaleSolution.Data.Entities.Category", "Category")
                         .WithMany("CategoryTranslations")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("eShopSolution.Data.Entities.Language", "Language")
+                    b.HasOne("eSaleSolution.Data.Entities.Language", "Language")
                         .WithMany("CategoryTranslations")
                         .HasForeignKey("LanguageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Order", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Order", b =>
                 {
-                    b.HasOne("eShopSolution.Data.Entities.AppUser", "AppUser")
+                    b.HasOne("eSaleSolution.Data.Entities.AppUser", "AppUser")
                         .WithMany("Orders")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.OrderDetail", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.OrderDetail", b =>
                 {
-                    b.HasOne("eShopSolution.Data.Entities.Order", "Order")
+                    b.HasOne("eSaleSolution.Data.Entities.Order", "Order")
                         .WithMany("OrderDetails")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("eShopSolution.Data.Entities.Product", "Product")
+                    b.HasOne("eSaleSolution.Data.Entities.Product", "Product")
                         .WithMany("OrderDetails")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.ProductImage", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.ProductImage", b =>
                 {
-                    b.HasOne("eShopSolution.Data.Entities.Product", "Product")
+                    b.HasOne("eSaleSolution.Data.Entities.Product", "Product")
                         .WithMany("ProductImages")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.ProductInCategory", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.ProductInCategory", b =>
                 {
-                    b.HasOne("eShopSolution.Data.Entities.Category", "Category")
+                    b.HasOne("eSaleSolution.Data.Entities.Category", "Category")
                         .WithMany("ProductInCategories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("eShopSolution.Data.Entities.Product", "Product")
+                    b.HasOne("eSaleSolution.Data.Entities.Product", "Product")
                         .WithMany("ProductInCategories")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.ProductTranslation", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.ProductTranslation", b =>
                 {
-                    b.HasOne("eShopSolution.Data.Entities.Language", "Language")
+                    b.HasOne("eSaleSolution.Data.Entities.Language", "Language")
                         .WithMany("ProductTranslations")
                         .HasForeignKey("LanguageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("eShopSolution.Data.Entities.Product", "Product")
+                    b.HasOne("eSaleSolution.Data.Entities.Product", "Product")
                         .WithMany("ProductTranslations")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("eShopSolution.Data.Entities.Transaction", b =>
+            modelBuilder.Entity("eSaleSolution.Data.Entities.Transaction", b =>
                 {
-                    b.HasOne("eShopSolution.Data.Entities.AppUser", "AppUser")
+                    b.HasOne("eSaleSolution.Data.Entities.AppUser", "AppUser")
                         .WithMany("Transactions")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

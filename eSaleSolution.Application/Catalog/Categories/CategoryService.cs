@@ -1,5 +1,5 @@
-﻿using eShopSolution.Data.EF;
-using eShopSolution.ViewModels.Catalog.Categories;
+﻿using eSaleSolution.Data.EF;
+using eSaleSolution.ViewModels.Catalog.Categories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace eShopSolution.Application.Catalog.Categories
+namespace eSaleSolution.Application.Catalog.Categories
 {
     public class CategoryService : ICategoryService
     {
-        private readonly EShopDbContext _context;
+        private readonly ESaleDbContext _context;
 
-        public CategoryService(EShopDbContext context)
+        public CategoryService(ESaleDbContext context)
         {
             _context = context;
         }

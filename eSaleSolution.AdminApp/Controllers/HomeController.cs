@@ -5,12 +5,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using eShopSolution.AdminApp.Models;
+using eSaleSolution.AdminApp.Models;
 using Microsoft.AspNetCore.Authorization;
-using eShopSolution.Utilities.Constants;
+using eSaleSolution.Utilities.Constants;
 using Microsoft.AspNetCore.Http;
 
-namespace eShopSolution.AdminApp.Controllers
+namespace eSaleSolution.AdminApp.Controllers
 {
     public class HomeController : BaseController
     {

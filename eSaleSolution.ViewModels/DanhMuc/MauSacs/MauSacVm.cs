@@ -1,9 +1,9 @@
-﻿using eShopSolution.ViewModels.Common;
+﻿using eSaleSolution.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.MauSacs
+namespace eSaleSolution.ViewModels.DanhMuc.MauSacs
 {
     public class MauSacVm : BaseRequest
     {

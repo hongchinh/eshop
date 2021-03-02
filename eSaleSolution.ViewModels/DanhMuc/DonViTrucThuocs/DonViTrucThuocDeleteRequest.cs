@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.DonViTrucThuocs
+namespace eSaleSolution.ViewModels.DanhMuc.DonViTrucThuocs
 {
     public class DonViTrucThuocDeleteRequest
     {

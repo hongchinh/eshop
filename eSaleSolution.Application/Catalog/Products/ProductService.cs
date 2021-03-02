@@ -1,11 +1,11 @@
-﻿using eShopSolution.Application.Common;
-using eShopSolution.Data.EF;
-using eShopSolution.Data.Entities;
-using eShopSolution.Utilities.Constants;
-using eShopSolution.Utilities.Exceptions;
-using eShopSolution.ViewModels.Catalog.ProductImages;
-using eShopSolution.ViewModels.Catalog.Products;
-using eShopSolution.ViewModels.Common;
+﻿using eSaleSolution.Application.Common;
+using eSaleSolution.Data.EF;
+using eSaleSolution.Data.Entities;
+using eSaleSolution.Utilities.Constants;
+using eSaleSolution.Utilities.Exceptions;
+using eSaleSolution.ViewModels.Catalog.ProductImages;
+using eSaleSolution.ViewModels.Catalog.Products;
+using eSaleSolution.ViewModels.Common;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -16,15 +16,15 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.Catalog.Products
+namespace eSaleSolution.Application.Catalog.Products
 {
     public class ProductService : IProductService
     {
-        private readonly EShopDbContext _context;
+        private readonly ESaleDbContext _context;
         private readonly IStorageService _storageService;
         private const string USER_CONTENT_FOLDER_NAME = "user-content";
 
-        public ProductService(EShopDbContext context, IStorageService storageService)
+        public ProductService(ESaleDbContext context, IStorageService storageService)
         {
             _context = context;
             _storageService = storageService;
@@ -121,7 +121,7 @@ namespace eShopSolution.Application.Catalog.Products
         public async Task<int> Delete(int productId)
         {
             var product = await _context.Products.FindAsync(productId);
-            if (product == null) throw new EShopException($"Cannot find a product: {productId}");
+            if (product == null) throw new ESaleException($"Cannot find a product: {productId}");
 
             var images = _context.ProductImages.Where(i => i.ProductId == productId);
             foreach (var image in images)
@@ -229,7 +229,7 @@ namespace eShopSolution.Application.Catalog.Products
         {
             var image = await _context.ProductImages.FindAsync(imageId);
             if (image == null)
-                throw new EShopException($"Cannot find an image with id {imageId}");
+                throw new ESaleException($"Cannot find an image with id {imageId}");
 
             var viewModel = new ProductImageViewModel()
             {
@@ -265,7 +265,7 @@ namespace eShopSolution.Application.Catalog.Products
         {
             var productImage = await _context.ProductImages.FindAsync(imageId);
             if (productImage == null)
-                throw new EShopException($"Cannot find an image with id {imageId}");
+                throw new ESaleException($"Cannot find an image with id {imageId}");
             _context.ProductImages.Remove(productImage);
             return await _context.SaveChangesAsync();
         }
@@ -276,7 +276,7 @@ namespace eShopSolution.Application.Catalog.Products
             var productTranslations = await _context.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == request.Id
             && x.LanguageId == request.LanguageId);
 
-            if (product == null || productTranslations == null) throw new EShopException($"Cannot find a product with id: {request.Id}");
+            if (product == null || productTranslations == null) throw new ESaleException($"Cannot find a product with id: {request.Id}");
 
             productTranslations.Name = request.Name;
             productTranslations.SeoAlias = request.SeoAlias;
@@ -304,7 +304,7 @@ namespace eShopSolution.Application.Catalog.Products
         {
             var productImage = await _context.ProductImages.FindAsync(imageId);
             if (productImage == null)
-                throw new EShopException($"Cannot find an image with id {imageId}");
+                throw new ESaleException($"Cannot find an image with id {imageId}");
 
             if (request.ImageFile != null)
             {
@@ -318,7 +318,7 @@ namespace eShopSolution.Application.Catalog.Products
         public async Task<bool> UpdatePrice(int productId, decimal newPrice)
         {
             var product = await _context.Products.FindAsync(productId);
-            if (product == null) throw new EShopException($"Cannot find a product with id: {productId}");
+            if (product == null) throw new ESaleException($"Cannot find a product with id: {productId}");
             product.Price = newPrice;
             return await _context.SaveChangesAsync() > 0;
         }
@@ -326,7 +326,7 @@ namespace eShopSolution.Application.Catalog.Products
         public async Task<bool> UpdateStock(int productId, int addedQuantity)
         {
             var product = await _context.Products.FindAsync(productId);
-            if (product == null) throw new EShopException($"Cannot find a product with id: {productId}");
+            if (product == null) throw new ESaleException($"Cannot find a product with id: {productId}");
             product.Stock += addedQuantity;
             return await _context.SaveChangesAsync() > 0;
         }

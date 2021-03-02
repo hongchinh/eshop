@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ApiIntegration
+namespace eSaleSolution.ApiIntegration
 {
     class OrderApiClient
     {

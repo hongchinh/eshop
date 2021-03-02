@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace eShopSolution.Data.Entities
+namespace eSaleSolution.Data.Entities
 {
     public class ProductImage
     {

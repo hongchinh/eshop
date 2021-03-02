@@ -1,11 +1,11 @@
-﻿using eShopSolution.Application.Catalog.Products;
-using eShopSolution.ViewModels.Catalog.ProductImages;
-using eShopSolution.ViewModels.Catalog.Products;
+﻿using eSaleSolution.Application.Catalog.Products;
+using eSaleSolution.ViewModels.Catalog.ProductImages;
+using eSaleSolution.ViewModels.Catalog.Products;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace eShopSolution.BackendApi.Controllers
+namespace eSaleSolution.BackendApi.Controllers
 {
     //api/products
     [Route("api/[controller]")]

@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.Common
+namespace eSaleSolution.Application.Common
 {
     public interface IStorageService
     {

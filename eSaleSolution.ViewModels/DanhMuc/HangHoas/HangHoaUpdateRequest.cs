@@ -1,9 +1,9 @@
-﻿using eShopSolution.ViewModels.Common;
+﻿using eSaleSolution.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.HangHoas
+namespace eSaleSolution.ViewModels.DanhMuc.HangHoas
 {
     public class HangHoaUpdateRequest : BaseRequest 
     {

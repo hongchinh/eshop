@@ -1,8 +1,8 @@
-﻿using eShopSolution.Data.Enums;
+﻿using eSaleSolution.Data.Enums;
 using System;
 using System.Collections.Generic;
 
-namespace eShopSolution.Data.Entities
+namespace eSaleSolution.Data.Entities
 {
     public class Order
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.SoChungTus
+namespace eSaleSolution.ViewModels.DanhMuc.SoChungTus
 {
     public class SoChungTuDeleteRequest
     {

@@ -1,16 +1,16 @@
 using System.Collections.Generic;
-using eShopSolution.Application.Catalog.Categories;
-using eShopSolution.Application.Catalog.Products;
-using eShopSolution.Application.Common;
-using eShopSolution.Application.DanhMuc.HangHoas;
-using eShopSolution.Application.System.Languages;
-using eShopSolution.Application.System.Roles;
-using eShopSolution.Application.System.Users;
-using eShopSolution.Application.Utilities.Slides;
-using eShopSolution.Data.EF;
-using eShopSolution.Data.Entities;
-using eShopSolution.Utilities.Constants;
-using eShopSolution.ViewModels.System.Users;
+using eSaleSolution.Application.Catalog.Categories;
+using eSaleSolution.Application.Catalog.Products;
+using eSaleSolution.Application.Common;
+using eSaleSolution.Application.DanhMuc.HangHoas;
+using eSaleSolution.Application.System.Languages;
+using eSaleSolution.Application.System.Roles;
+using eSaleSolution.Application.System.Users;
+using eSaleSolution.Application.Utilities.Slides;
+using eSaleSolution.Data.EF;
+using eSaleSolution.Data.Entities;
+using eSaleSolution.Utilities.Constants;
+using eSaleSolution.ViewModels.System.Users;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -24,7 +24,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
-namespace eShopSolution.BackendApi
+namespace eSaleSolution.BackendApi
 {
     public class Startup
     {
@@ -38,11 +38,11 @@ namespace eShopSolution.BackendApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<EShopDbContext>(options =>
+            services.AddDbContext<ESaleDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString(SystemConstants.MainConnectionString)));
 
             services.AddIdentity<AppUser, AppRole>()
-                .AddEntityFrameworkStores<EShopDbContext>()
+                .AddEntityFrameworkStores<ESaleDbContext>()
                 .AddDefaultTokenProviders();
 
             //Declare DI
@@ -69,7 +69,7 @@ namespace eShopSolution.BackendApi
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger eShop Solution", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger eSale Solution", Version = "v1" });
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
@@ -153,7 +153,7 @@ namespace eShopSolution.BackendApi
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger eShopSolution V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger eSaleSolution V1");
             });
 
             app.UseEndpoints(endpoints =>

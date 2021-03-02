@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
-namespace eShopSolution.ViewModels.Catalog.Products
+namespace eSaleSolution.ViewModels.Catalog.Products
 {
     public class ProductCreateRequest
     {

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using eShopSolution.ApiIntegration;
-using eShopSolution.Utilities.Constants;
-using eShopSolution.ViewModels.Sales;
-using eShopSolution.WebApp.Models;
+using eSaleSolution.ApiIntegration;
+using eSaleSolution.Utilities.Constants;
+using eSaleSolution.ViewModels.Sales;
+using eSaleSolution.WebApp.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace eShopSolution.WebApp.Controllers
+namespace eSaleSolution.WebApp.Controllers
 {
     public class CartController : Controller
     {

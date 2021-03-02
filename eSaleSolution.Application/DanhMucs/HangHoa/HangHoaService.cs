@@ -1,23 +1,23 @@
-﻿using eShopSolution.Application.Common;
-using eShopSolution.Data.EF;
-using eShopSolution.Data.Entities;
-using eShopSolution.Utilities.Exceptions;
-using eShopSolution.ViewModels.Common;
-using eShopSolution.ViewModels.DanhMuc.HangHoas;
+﻿using eSaleSolution.Application.Common;
+using eSaleSolution.Data.EF;
+using eSaleSolution.Data.Entities;
+using eSaleSolution.Utilities.Exceptions;
+using eSaleSolution.ViewModels.Common;
+using eSaleSolution.ViewModels.DanhMuc.HangHoas;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.DanhMuc.HangHoas
+namespace eSaleSolution.Application.DanhMuc.HangHoas
 {
     public class HangHoaService : IHangHoaService
     {
-        private readonly EShopDbContext _context;
+        private readonly ESaleDbContext _context;
         private readonly IStorageService _storageService;
         private const string USER_CONTENT_FOLDER_NAME = "user-content";
 
-        public HangHoaService(EShopDbContext context, IStorageService storageService)
+        public HangHoaService(ESaleDbContext context, IStorageService storageService)
         {
             _context = context;
             _storageService = storageService;
@@ -64,7 +64,7 @@ namespace eShopSolution.Application.DanhMuc.HangHoas
         {
             var hanghoa = await _context.DanhMucHangHoas.FindAsync(hangHoaId);
 
-            if (hanghoa == null) throw new EShopException($"Cannot find a product: {hangHoaId}");
+            if (hanghoa == null) throw new ESaleException($"Cannot find a product: {hangHoaId}");
 
             _context.DanhMucHangHoas.Remove(hanghoa);
 
@@ -160,7 +160,7 @@ namespace eShopSolution.Application.DanhMuc.HangHoas
         {
             var hanghoa = await _context.DanhMucHangHoas.FindAsync(request.Id);
 
-            if (hanghoa == null) throw new EShopException($"Cannot find a product with id: {request.Id}");
+            if (hanghoa == null) throw new ESaleException($"Cannot find a product with id: {request.Id}");
 
             hanghoa.MaHangHoa = request.MaHangHoa;
             hanghoa.TenHangHoa = request.TenHangHoa;

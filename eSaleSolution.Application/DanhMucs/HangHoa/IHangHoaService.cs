@@ -1,12 +1,12 @@
-﻿using eShopSolution.ViewModels.Catalog.ProductImages;
-using eShopSolution.ViewModels.Catalog.Products;
-using eShopSolution.ViewModels.Common;
-using eShopSolution.ViewModels.DanhMuc.HangHoas;
+﻿using eSaleSolution.ViewModels.Catalog.ProductImages;
+using eSaleSolution.ViewModels.Catalog.Products;
+using eSaleSolution.ViewModels.Common;
+using eSaleSolution.ViewModels.DanhMuc.HangHoas;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.DanhMuc.HangHoas
+namespace eSaleSolution.Application.DanhMuc.HangHoas
 {
     public interface IHangHoaService
     {

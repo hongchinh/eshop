@@ -1,4 +1,4 @@
-﻿using eShopSolution.ApiIntegration;
+﻿using eSaleSolution.ApiIntegration;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShopSolution.WebApp.Controllers.Components
+namespace eSaleSolution.WebApp.Controllers.Components
 {
     public class SideBarViewComponent : ViewComponent
     {

@@ -1,12 +1,12 @@
-﻿using eShopSolution.ViewModels.Common;
-using eShopSolution.ViewModels.System.Languages;
-using eShopSolution.ViewModels.System.Users;
+﻿using eSaleSolution.ViewModels.Common;
+using eSaleSolution.ViewModels.System.Languages;
+using eSaleSolution.ViewModels.System.Users;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eShopSolution.Application.System.Languages
+namespace eSaleSolution.Application.System.Languages
 {
     public interface ILanguageService
     {

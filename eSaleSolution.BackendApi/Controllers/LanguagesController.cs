@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using eShopSolution.Application.System.Languages;
+using eSaleSolution.Application.System.Languages;
 using Microsoft.AspNetCore.Mvc;
 
-namespace eShopSolution.BackendApi.Controllers
+namespace eSaleSolution.BackendApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

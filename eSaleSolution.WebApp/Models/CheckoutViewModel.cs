@@ -1,10 +1,10 @@
-﻿using eShopSolution.ViewModels.Sales;
+﻿using eSaleSolution.ViewModels.Sales;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShopSolution.WebApp.Models
+namespace eSaleSolution.WebApp.Models
 {
     public class CheckoutViewModel
     {

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.Data.Entities
+namespace eSaleSolution.Data.Entities
 {
     public class AppUser : IdentityUser<Guid>
     {

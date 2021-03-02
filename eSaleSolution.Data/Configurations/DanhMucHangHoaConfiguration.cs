@@ -1,8 +1,8 @@
-﻿using eShopSolution.Data.Entities;
+﻿using eSaleSolution.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace eShopSolution.Data.Configurations
+namespace eSaleSolution.Data.Configurations
 {
     public class DanhMucHangHoaConfiguration : IEntityTypeConfiguration<DanhMucHangHoa>
     {

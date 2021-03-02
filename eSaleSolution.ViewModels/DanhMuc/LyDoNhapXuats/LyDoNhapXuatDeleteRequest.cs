@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.LyDoNhapXuats
+namespace eSaleSolution.ViewModels.DanhMuc.LyDoNhapXuats
 {
     public class LyDoNhapXuatDeleteRequest
     {

@@ -1,16 +1,16 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using eShopSolution.ApiIntegration;
-using eShopSolution.Utilities.Constants;
-using eShopSolution.ViewModels.Catalog.Products;
-using eShopSolution.ViewModels.Common;
-using eShopSolution.ViewModels.System.Products;
+using eSaleSolution.ApiIntegration;
+using eSaleSolution.Utilities.Constants;
+using eSaleSolution.ViewModels.Catalog.Products;
+using eSaleSolution.ViewModels.Common;
+using eSaleSolution.ViewModels.System.Products;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 
-namespace eShopSolution.AdminApp.Controllers
+namespace eSaleSolution.AdminApp.Controllers
 {
     public class ProductController : Controller
     {

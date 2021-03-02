@@ -1,6 +1,6 @@
-﻿using eShopSolution.Data.Configurations;
-using eShopSolution.Data.Entities;
-using eShopSolution.Data.Extensions;
+﻿using eSaleSolution.Data.Configurations;
+using eSaleSolution.Data.Entities;
+using eSaleSolution.Data.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -8,11 +8,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.Data.EF
+namespace eSaleSolution.Data.EF
 {
-    public class EShopDbContext : IdentityDbContext<AppUser, AppRole, Guid>
+    public class ESaleDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
-        public EShopDbContext(DbContextOptions options) : base(options)
+        public ESaleDbContext(DbContextOptions options) : base(options)
         {
         }
 

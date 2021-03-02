@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.MauSacs
+namespace eSaleSolution.ViewModels.DanhMuc.MauSacs
 {
     public class MauSacDeleteRequest
     {

@@ -1,6 +1,6 @@
-﻿using eShopSolution.ApiIntegration;
-using eShopSolution.Utilities.Constants;
-using eShopSolution.ViewModels.DanhMuc.HangHoas;
+﻿using eSaleSolution.ApiIntegration;
+using eSaleSolution.Utilities.Constants;
+using eSaleSolution.ViewModels.DanhMuc.HangHoas;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShopSolution.AdminApp.Controllers
+namespace eSaleSolution.AdminApp.Controllers
 {
     public class HangHoaController : Controller
     {

@@ -1,6 +1,6 @@
-﻿using eShopSolution.ViewModels.Common;
+﻿using eSaleSolution.ViewModels.Common;
 
-namespace eShopSolution.ViewModels.DanhMuc.NhomVatTus
+namespace eSaleSolution.ViewModels.DanhMuc.NhomVatTus
 {
     public class GetNhomVatTuPagingRequest : PagingRequestBase
     {

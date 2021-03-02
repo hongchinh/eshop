@@ -1,9 +1,9 @@
-﻿using eShopSolution.ViewModels.Catalog.Categories;
+﻿using eSaleSolution.ViewModels.Catalog.Categories;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.Catalog.Products
+namespace eSaleSolution.ViewModels.Catalog.Products
 {
     public class ProductVm
     {

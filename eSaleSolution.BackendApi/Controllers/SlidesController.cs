@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using eShopSolution.Application.Utilities.Slides;
+using eSaleSolution.Application.Utilities.Slides;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace eShopSolution.BackendApi.Controllers
+namespace eSaleSolution.BackendApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

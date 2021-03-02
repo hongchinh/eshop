@@ -1,11 +1,11 @@
-﻿using eShopSolution.ViewModels.Common;
+﻿using eSaleSolution.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.DoDays
+namespace eSaleSolution.ViewModels.DanhMuc.DoDays
 {
-    public class DoDayUpdateRequest : BaseRequest
+    public class NhapXuatUpdateRequest : BaseRequest
     {
         public int Id { get; set; }
 

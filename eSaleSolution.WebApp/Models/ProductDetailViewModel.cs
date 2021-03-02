@@ -1,12 +1,12 @@
-﻿using eShopSolution.ViewModels.Catalog.Categories;
-using eShopSolution.ViewModels.Catalog.ProductImages;
-using eShopSolution.ViewModels.Catalog.Products;
+﻿using eSaleSolution.ViewModels.Catalog.Categories;
+using eSaleSolution.ViewModels.Catalog.ProductImages;
+using eSaleSolution.ViewModels.Catalog.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShopSolution.WebApp.Models
+namespace eSaleSolution.WebApp.Models
 {
     public class ProductDetailViewModel
     {

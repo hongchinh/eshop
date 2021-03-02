@@ -1,11 +1,11 @@
-﻿using eShopSolution.ViewModels.Catalog.Products;
-using eShopSolution.ViewModels.Utilities.Slides;
+﻿using eSaleSolution.ViewModels.Catalog.Products;
+using eSaleSolution.ViewModels.Utilities.Slides;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShopSolution.WebApp.Models
+namespace eSaleSolution.WebApp.Models
 {
     public class HomeViewModel
     {

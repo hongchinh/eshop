@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.DanhMuc.LoaiTons
+namespace eSaleSolution.ViewModels.DanhMuc.LoaiTons
 {
     public class LoaiTonDeleteRequest
     {

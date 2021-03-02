@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.ViewModels.Utilities.Slides
+namespace eSaleSolution.ViewModels.Utilities.Slides
 {
     public class SlideVm
     {
