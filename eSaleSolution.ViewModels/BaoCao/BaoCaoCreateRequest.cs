@@ -18,5 +18,8 @@ namespace eSaleSolution.ViewModels.BaoCao
         public string ExcelFiles { get; set; }
         public bool Selected { get; set; }
 
+        public string MaDonViSuDung { get; set; }
+        public string TenDonViSuDung { get; set; }
+
     }
 }

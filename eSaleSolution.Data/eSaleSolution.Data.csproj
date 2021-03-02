@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Entities\DanhMuc\DanhMucHopDong.cs" />
+    <Compile Remove="Entities\DanhMuc\DanhMucNhomDonViCap2.cs" />
+    <Compile Remove="Entities\DanhMuc\DanhMucNhomVatTuCap2.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.3">
       <PrivateAssets>all</PrivateAssets>

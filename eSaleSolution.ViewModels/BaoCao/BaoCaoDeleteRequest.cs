@@ -8,5 +8,6 @@ namespace eSaleSolution.ViewModels.BaoCao
 {
     public class BaoCaoDeleteRequest
     {
+        public int Id { get; set; }
     }
 }

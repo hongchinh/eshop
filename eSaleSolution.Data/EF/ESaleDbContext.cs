@@ -92,7 +92,6 @@ namespace eSaleSolution.Data.EF
 
         public DbSet<DanhMucHinhThucTT> DanhMucHinhThucTTs { get; set; }
 
-        public DbSet<DanhMucHopDong> DanhMucHopDongs { get; set; }
 
         public DbSet<DanhMucKhoanChi> DanhMucKhoanChis { get; set; }
 
@@ -111,21 +110,19 @@ namespace eSaleSolution.Data.EF
         public DbSet<DanhMucLoaiTon> DanhMucLoaiTons { get; set; }
 
         public DbSet<DanhMucLyDoNhapXuat> DanhMucLyDoNhapXuats { get; set; }
-        
+
         public DbSet<DanhMucLyDoThuChi> DanhMucLyDoThuChis { get; set; }
-        
+
         public DbSet<DanhMucMauSac> DanhMucMauSacs { get; set; }
-        
+
         public DbSet<DanhMucNhomDonVi> DanhMucNhomDonVis { get; set; }
-        
-        public DbSet<DanhMucNhomDonViCap2> DanhMucNhomDonViCap2s { get; set; }
-        
+
+
         public DbSet<DanhMucNhomVatTu> DanhMucNhomVatTus { get; set; }
-        
-        public DbSet<DanhMucNhomVatTuCap2> DanhMucNhomVatTuCap2s { get; set; }
-        
+
+
         public DbSet<DanhMucSoChungTu> DanhMucSoChungTus { get; set; }
-        
+
         public DbSet<DanhMucTenDonVi> DanhMucTenDonVis { get; set; }
 
 
