@@ -3,12 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eSaleSolution.ViewModels.DanhMuc.NhoDonVis
+namespace eSaleSolution.ViewModels.DanhMuc.NhomDonVis
 {
-    public class NhoDonViUpdateRequest : BaseRequest
+    public class GetNhomDonViPagingRequest : PagingRequestBase
     {
         public int Id { get; set; }
-
         public string MaNhom { get; set; }
 
         public string TenNhom { get; set; }

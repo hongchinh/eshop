@@ -60,11 +60,11 @@ namespace eSaleSolution.Application.DanhMuc.HangHoas
             return hangHoa.Id;
         }
 
-        public async Task<int> Delete(int hangHoaId)
+        public async Task<int> Delete(int Id)
         {
-            var hanghoa = await _context.DanhMucHangHoas.FindAsync(hangHoaId);
+            var hanghoa = await _context.DanhMucHangHoas.FindAsync(Id);
 
-            if (hanghoa == null) throw new ESaleException($"Cannot find a product: {hangHoaId}");
+            if (hanghoa == null) throw new ESaleException($"Cannot find a product: {Id}");
 
             _context.DanhMucHangHoas.Remove(hanghoa);
 
@@ -122,10 +122,11 @@ namespace eSaleSolution.Application.DanhMuc.HangHoas
             return pagedResult;
         }
 
-        public async Task<HangHoaVm> GetById(int hangHoaId)
+        public async Task<HangHoaVm> GetById(int Id)
         {
-            var product = await _context.DanhMucHangHoas.FindAsync(hangHoaId);
+            var product = await _context.DanhMucHangHoas.FindAsync(Id);
 
+            if (product == null) throw new ESaleException($"Cannot find a product: {Id}");
 
             var hanghoaViewModel = new HangHoaVm()
             {

@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eSaleSolution.ViewModels.DanhMuc.NhoDonVis
+namespace eSaleSolution.ViewModels.DanhMuc.NhomDonVis
 {
-    public class NhoDonViCreateRequest : BaseRequest
+    public class NhomDonViCreateRequest : BaseRequest
     {
 
         public string MaNhom { get; set; }

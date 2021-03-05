@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eSaleSolution.ViewModels.DanhMuc.DonThus
+namespace eSaleSolution.ViewModels.DanhMuc.KhoanThus
 {
     public class KhoanThuCreateRequest : BaseRequest
     {

@@ -9,11 +9,14 @@ namespace eSaleSolution.ViewModels.DanhMuc.DonViTrucThuocs
     {
         public int Id { get; set; }
 
-        public string MaSo { get; set; }
+        public string MaDonVi { get; set; }
 
-        public string ChiTieu { get; set; }
+        public string TenDonVi { get; set; }
+
+        public string DiaChi { get; set; }
 
         public string GhiChu { get; set; }
+
 
     }
 }

@@ -14,9 +14,9 @@ namespace eSaleSolution.Application.DanhMuc.HangHoas
 
         Task<int> Update(HangHoaUpdateRequest request);
 
-        Task<int> Delete(int hangHoaId);
+        Task<int> Delete(int Id);
 
-        Task<HangHoaVm> GetById(int hangHoaId);
+        Task<HangHoaVm> GetById(int Id);
 
         Task<PagedResult<HangHoaVm>> GetAllPaging(GetHangHoaPagingRequest request);
 

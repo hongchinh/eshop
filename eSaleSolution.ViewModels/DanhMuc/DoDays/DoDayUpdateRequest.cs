@@ -5,7 +5,7 @@ using System.Text;
 
 namespace eSaleSolution.ViewModels.DanhMuc.DoDays
 {
-    public class NhapXuatUpdateRequest : BaseRequest
+    public class DoDayUpdateRequest : BaseRequest
     {
         public int Id { get; set; }
 
