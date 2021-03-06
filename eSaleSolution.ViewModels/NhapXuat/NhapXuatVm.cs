@@ -5,7 +5,7 @@ using System.Text;
 
 namespace eSaleSolution.ViewModels.NhapXuats
 {
-    public class DoDayVm : BaseRequest
+    public class NhapXuatVm : BaseRequest
     {
         public int Id { get; set; }
         public string Loai { get; set; }

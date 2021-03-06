@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eSaleSolution.ViewModels.DanhMuc.NhapXuats
+namespace eSaleSolution.ViewModels.NhapXuats
 {
-    public class GetNhapXuatRequest 
+    public class GetNhapXuatRequest : BaseRequest
     {
         public int Id { get; set; }
         public string SoChungTu { get; set; }

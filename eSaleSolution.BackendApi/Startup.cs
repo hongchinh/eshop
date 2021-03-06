@@ -1,12 +1,16 @@
 using System.Collections.Generic;
+using AutoMapper;
 using eSaleSolution.Application.Catalog.Categories;
 using eSaleSolution.Application.Catalog.Products;
 using eSaleSolution.Application.Common;
 using eSaleSolution.Application.DanhMuc.HangHoas;
+using eSaleSolution.Application.DanhMuc.TenDonVis;
 using eSaleSolution.Application.System.Languages;
 using eSaleSolution.Application.System.Roles;
 using eSaleSolution.Application.System.Users;
 using eSaleSolution.Application.Utilities.Slides;
+using eSaleSolution.BackendApi.Mapping;
+using eSaleSolution.Data.Data;
 using eSaleSolution.Data.EF;
 using eSaleSolution.Data.Entities;
 using eSaleSolution.Utilities.Constants;
@@ -45,12 +49,24 @@ namespace eSaleSolution.BackendApi
                 .AddEntityFrameworkStores<ESaleDbContext>()
                 .AddDefaultTokenProviders();
 
+            // Auto Mapper Configurations
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
             //Declare DI
+            services.AddScoped(typeof(IEntityRepository<,>), typeof(EntityRepository<,>));
+
             services.AddTransient<IStorageService, FileStorageService>();
 
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IHangHoaService, HangHoaService>();
+            services.AddTransient<ITenDonViService, TenDonViService>();
 
             services.AddTransient<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddTransient<SignInManager<AppUser>, SignInManager<AppUser>>();

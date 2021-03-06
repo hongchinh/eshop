@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using eSaleSolution.ApiIntegration;
 using eSaleSolution.ViewModels.System.Users;
 using FluentValidation.AspNetCore;
@@ -9,10 +6,11 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using AutoMapper;
+using eSaleSolution.AdminApp.Mapping;
 
 namespace eSaleSolution.AdminApp
 {
@@ -29,6 +27,15 @@ namespace eSaleSolution.AdminApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient();
+
+            // Auto Mapper Configurations
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
@@ -51,7 +58,9 @@ namespace eSaleSolution.AdminApp
             services.AddTransient<ILanguageApiClient, LanguageApiClient>();
             services.AddTransient<IProductApiClient, ProductApiClient>();
             services.AddTransient<ICategoryApiClient, CategoryApiClient>();
+            //Danh muc
             services.AddTransient<IHangHoasApiClient, HangHoasApiClient>();
+            services.AddTransient<ITenDonVisApiClient, TenDonVisApiClient>();
 
 
             IMvcBuilder builder = services.AddRazorPages();

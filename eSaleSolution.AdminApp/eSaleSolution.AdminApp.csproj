@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
@@ -16,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\eSaleSolution.ApiIntegration\eSaleSolution.ApiIntegration.csproj" />
+    <ProjectReference Include="..\eSaleSolution.Data\eSaleSolution.Data.csproj" />
     <ProjectReference Include="..\eSaleSolution.Utilities\eSaleSolution.Utilities.csproj" />
     <ProjectReference Include="..\eSaleSolution.ViewModels\eSaleSolution.ViewModels.csproj" />
   </ItemGroup>

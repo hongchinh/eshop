@@ -40,7 +40,39 @@ namespace eSaleSolution.Data.EF
             modelBuilder.ApplyConfiguration(new ProductImageConfiguration());
             modelBuilder.ApplyConfiguration(new SlideConfiguration());
 
+            modelBuilder.ApplyConfiguration(new DanhMucChungLoaiConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucDoDayConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucDonViTrucThuocConfiguration());
             modelBuilder.ApplyConfiguration(new DanhMucHangHoaConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucHinhThucTTConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucKhoanChiConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucKhoanThuConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucKhoVatTuConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucKhuVucConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucKieuSongConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucLoaiNhapXuatConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucLoaiTienConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucLoaiTonConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucLyDoNhapXuatConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucLyDoThuChiConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucMauSacConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucNhomDonViConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucNhomVatTuConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucSoChungTuConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucTenDonViConfiguration());
+            modelBuilder.ApplyConfiguration(new DanhMucTinhTrangConfiguration());
+
+            modelBuilder.ApplyConfiguration(new NhapXuatConfiguration());
+            modelBuilder.ApplyConfiguration(new NoiDungNhapXuatConfiguration());
+
+            modelBuilder.ApplyConfiguration(new SoDuDauKyDoiTuongConfiguration());
+            modelBuilder.ApplyConfiguration(new SoDuDauKyHangHoaConfiguration());
+            modelBuilder.ApplyConfiguration(new SoDuTienMatConfiguration());
+
+            modelBuilder.ApplyConfiguration(new ChungTuConfiguration());
+
+
+            modelBuilder.ApplyConfiguration(new BaoCaoConfiguration());
 
 
             modelBuilder.Entity<IdentityUserClaim<Guid>>().ToTable("AppUserClaims");
@@ -125,7 +157,13 @@ namespace eSaleSolution.Data.EF
 
         public DbSet<DanhMucTenDonVi> DanhMucTenDonVis { get; set; }
 
+        public DbSet<DanhMucTinhTrang> DanhMucTinhTrangs { get; set; }
 
+        public DbSet<NhapXuat> NhapXuats { get; set; }
+
+        public DbSet<NoiDungNhapXuat> NoiDungNhapXuats { get; set; }
+
+        public DbSet<ChungTu> ChungTus { get; set; }
 
     }
 }

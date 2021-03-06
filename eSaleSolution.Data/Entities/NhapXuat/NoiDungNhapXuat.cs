@@ -8,6 +8,7 @@ namespace eSaleSolution.Data.Entities
 {
     public class NoiDungNhapXuat
     {
+        public int id { get; set; }
         public int IdId { get; set; }
 
         public string LoaiPhieu { get; set; }

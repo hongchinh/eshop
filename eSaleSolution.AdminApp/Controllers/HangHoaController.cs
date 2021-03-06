@@ -1,4 +1,5 @@
-﻿using eSaleSolution.ApiIntegration;
+﻿using AutoMapper;
+using eSaleSolution.ApiIntegration;
 using eSaleSolution.Utilities.Constants;
 using eSaleSolution.ViewModels.DanhMuc.HangHoas;
 using Microsoft.AspNetCore.Http;
@@ -16,16 +17,18 @@ namespace eSaleSolution.AdminApp.Controllers
     {
         private readonly IHangHoasApiClient _hanghoaApiClient;
         private readonly IConfiguration _configuration;
-
+        private readonly IMapper _mapper;
         private readonly ICategoryApiClient _categoryApiClient;
 
         public HangHoaController(IHangHoasApiClient hanghoaApiClient,
             IConfiguration configuration,
-            ICategoryApiClient categoryApiClient)
+            ICategoryApiClient categoryApiClient,
+            IMapper mapper)
         {
             _configuration = configuration;
             _hanghoaApiClient = hanghoaApiClient;
             _categoryApiClient = categoryApiClient;
+            _mapper = mapper;
         }
 
         public async Task<IActionResult> Index(string mahanghoa, string tenhanghoa, string donvitinh, int pageIndex = 1, int pageSize = 10)
@@ -65,7 +68,7 @@ namespace eSaleSolution.AdminApp.Controllers
             if (!ModelState.IsValid)
                 return View(request);
 
-            var result = await _hanghoaApiClient.CreateHangHoa(request);
+            var result = await _hanghoaApiClient.Create(request);
             if (result)
             {
                 TempData["result"] = "Thêm mới hàng hóa thành công";
@@ -80,38 +83,9 @@ namespace eSaleSolution.AdminApp.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-
-
             var product = await _hanghoaApiClient.GetById(id);
-            var editVm = new HangHoaUpdateRequest()
-            {
-                Id = product.Id,
-                MaHangHoa = product.MaHangHoa,
-                TenHangHoa = product.TenHangHoa,
-                DonViTinh = product.DonViTinh,
-                MaNhomHang = product.MaNhomHang,
-                TenNhomHang = product.TenNhomHang,
-                QuyCach = product.QuyCach,
-                TyTrong = product.TyTrong,
-                DonGia = product.DonGia,
-                GiaNhap = product.GiaNhap,
-                GiaXuat = product.GiaXuat,
-                TyLeChietKhau = product.TyLeChietKhau,
-                GiaBanLe = product.GiaBanLe,
-                TyLeVat = product.TyLeVat,
-                LoaiThue = product.LoaiThue,
-                SoLuongToiThieu = product.SoLuongToiThieu,
-                SoLuongToiDa = product.SoLuongToiDa,
-                MaDonViSuDung = product.MaDonViSuDung,
-                KhoRongTon = product.KhoRongTon,
-                ChieuDai = product.ChieuDai,
-                LoaiTon = product.LoaiTon,
-                MauSac = product.MauSac,
-                DoDay = product.DoDay,
-                ChungLoai = product.ChungLoai,
-                HangHoa = product.HangHoa,
-            };
-            return View(editVm);
+           
+            return View(product);
         }
 
         [HttpPost]
@@ -121,7 +95,7 @@ namespace eSaleSolution.AdminApp.Controllers
             if (!ModelState.IsValid)
                 return View(request);
 
-            var result = await _hanghoaApiClient.UpdateHangHoa(request);
+            var result = await _hanghoaApiClient.Update(request);
             if (result)
             {
                 TempData["result"] = "Cập nhật Hàng hóa thành công";
@@ -149,7 +123,7 @@ namespace eSaleSolution.AdminApp.Controllers
             if (!ModelState.IsValid)
                 return View();
 
-            var result = await _hanghoaApiClient.DeleteHangHoa(request.Id);
+            var result = await _hanghoaApiClient.Delete(request.Id);
             if (result)
             {
                 TempData["result"] = "Xóa sản phẩm thành công";

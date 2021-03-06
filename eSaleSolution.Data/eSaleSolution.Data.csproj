@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\AppContextFactory.cs" />
     <Compile Remove="Entities\DanhMuc\DanhMucHopDong.cs" />
     <Compile Remove="Entities\DanhMuc\DanhMucNhomDonViCap2.cs" />
     <Compile Remove="Entities\DanhMuc\DanhMucNhomVatTuCap2.cs" />

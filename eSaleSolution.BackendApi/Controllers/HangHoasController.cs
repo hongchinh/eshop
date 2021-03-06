@@ -24,10 +24,10 @@ namespace eSaleSolution.BackendApi.Controllers
             return Ok(hanghoas);
         }
 
-        [HttpGet("{hanghoaId}")]
-        public async Task<IActionResult> GetById(int hanghoaId)
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> GetById(int Id)
         {
-            var hanghoas = await _hangHoaService.GetById(hanghoaId);
+            var hanghoas = await _hangHoaService.GetById(Id);
             if (hanghoas == null)
                 return BadRequest();
             return Ok(hanghoas);
@@ -52,27 +52,27 @@ namespace eSaleSolution.BackendApi.Controllers
             return CreatedAtAction(nameof(GetById), new { id = hanghoaId }, hanghoa);
         }
 
-        [HttpPut("{hanghoaId}")]
+        [HttpPut("{Id}")]
         [Consumes("multipart/form-data")]
         [Authorize]
-        public async Task<IActionResult> Update([FromRoute] int hanghoaId, [FromForm] HangHoaUpdateRequest request)
+        public async Task<IActionResult> Update([FromRoute] int Id, [FromForm] HangHoaUpdateRequest request)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            request.Id = hanghoaId;
+            request.Id = Id;
             var affectedResult = await _hangHoaService.Update(request);
             if (affectedResult == 0)
                 return BadRequest();
             return Ok();
         }
 
-        [HttpDelete("{hanghoaId}")]
+        [HttpDelete("{Id}")]
         [Authorize]
-        public async Task<IActionResult> Delete(int hanghoaId)
+        public async Task<IActionResult> Delete(int Id)
         {
-            var affectedResult = await _hangHoaService.Delete(hanghoaId);
+            var affectedResult = await _hangHoaService.Delete(Id);
             if (affectedResult == 0)
                 return BadRequest();
             return Ok();
