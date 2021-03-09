@@ -703,16 +703,19 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <div class="top-row px-4">
-            Name: 
             <AuthorizeView>
                 <Authorized>
-                    <a href="/">Logout</a>
+                    <h1>Hello, @context.User.Identity.Name!</h1>
+                    <p>You can only see this content if you're authenticated.</p>
                 </Authorized>
                 <NotAuthorized>
-                    <a href="/">Login11111</a>
+                    <h1>Authentication Failure!</h1>
+                    <p>You're not signed in.</p>
                 </NotAuthorized>
+                <Authorizing>
+                    <h1>Authorizing</h1>
+                </Authorizing>
             </AuthorizeView>
-
 
             <a href="https://docs.microsoft.com/en-us/aspnet/" target="_blank">About</a>
         </div>

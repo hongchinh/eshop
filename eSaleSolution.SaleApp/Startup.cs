@@ -2,6 +2,7 @@ using eSaleSolution.SaleApp.Data;
 using eSaleSolution.SaleApp.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,14 +32,14 @@ namespace eSaleSolution.SaleApp
             services.AddSingleton<WeatherForecastService>();
 
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-               .AddCookie(options =>
-               {
-                   options.LoginPath = "/login";
-                   options.AccessDeniedPath = "/User/Forbidden/";
-               });
+            //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            //   .AddCookie(options =>
+            //   {
+            //       options.LoginPath = "/login";
+            //       options.AccessDeniedPath = "/User/Forbidden/";
+            //   });
 
-            services.AddScoped<IAuthenticationService, AuthenticationService>();
+
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IHttpService, HttpService>();
 
@@ -52,6 +53,13 @@ namespace eSaleSolution.SaleApp
             });
             services.AddOptions();
             services.AddAuthenticationCore();
+
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<CustomAuthenticationStateProvider, CustomAuthenticationStateProvider>();
+
+            services.AddScoped<AuthenticationStateProvider>(
+                    p => p.GetService<CustomAuthenticationStateProvider>());
+
 
         }
 

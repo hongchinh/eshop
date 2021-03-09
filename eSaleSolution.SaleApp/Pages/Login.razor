@@ -1,7 +1,10 @@
 ﻿@page "/login"
 @using System.ComponentModel.DataAnnotations
 @using eSaleSolution.SaleApp.Helpers;
+@using eSaleSolution.SaleApp.Services;
+
 @inject eSaleSolution.SaleApp.Services.IAuthenticationService AuthenticationService
+@inject CustomAuthenticationStateProvider authenticationStateProvider
 @inject NavigationManager NavigationManager
 
 <div class="col-md-6 offset-md-3 mt-5">
@@ -16,21 +19,23 @@
                 <DataAnnotationsValidator />
                 <div class="form-group">
                     <label>Username</label>
-                    <InputText @bind-Value="model.Username" class="form-control" />
-                    <ValidationMessage For="@(() => model.Username)" />
+                    <InputText @bind-Value="model.UserName" class="form-control" />
+                    <ValidationMessage For="@(() => model.UserName)" />
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <InputText @bind-Value="model.Password" type="password" class="form-control" />
-                    <ValidationMessage For="@(() => model.Password)" />
+                    <InputText @bind-Value="model.PassWord" type="password" class="form-control" />
+                    <ValidationMessage For="@(() => model.PassWord)" />
                 </div>
                 <button class="btn btn-primary">
-                    @if (loading) {
+                    @if (loading)
+                    {
                         <span class="spinner-border spinner-border-sm mr-1"></span>
                     }
                     Login
                 </button>
-                @if (!string.IsNullOrEmpty(error)) {
+                @if (!string.IsNullOrEmpty(error))
+                {
                     <div class="alert alert-danger mt-3 mb-0">@error</div>
                 }
             </EditForm>
@@ -39,17 +44,20 @@
 </div>
 
 @code {
+    [CascadingParameter] Task<AuthenticationState> authenticationStateTask { get; set; }
     private Model model = new Model();
     private bool loading;
     private string error;
+    AuthenticationState AuthState;
 
+    protected override Task OnInitializedAsync()
+    {
+
+        return base.OnInitializedAsync();
+    }
     protected override void OnInitialized()
     {
-        // redirect to home if already logged in
-        if (AuthenticationService.AppUser != null)
-        {
-            NavigationManager.NavigateTo("");
-        }
+
     }
 
     private async void HandleValidSubmit()
@@ -57,7 +65,9 @@
         loading = true;
         try
         {
-            await AuthenticationService.Login(model.Username, model.Password);
+            authenticationStateProvider.LoadUser(model.UserName, model.PassWord, true);
+            AuthState= await authenticationStateProvider.GetAuthenticationStateAsync();
+
             var returnUrl = NavigationManager.QueryString("returnUrl") ?? "";
             NavigationManager.NavigateTo(returnUrl);
         }
@@ -72,9 +82,9 @@
     private class Model
     {
         [Required]
-        public string Username { get; set; }
+        public string UserName { get; set; }
 
         [Required]
-        public string Password { get; set; }
+        public string PassWord { get; set; }
     }
 }

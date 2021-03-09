@@ -1,4 +1,20 @@
 ﻿@page "/"
-@page "/admin"
+@using eSaleSolution.SaleApp.Services;
+
 @attribute [Authorize]
+@inject eSaleSolution.SaleApp.Services.IAuthenticationService AuthenticationService
+@inject CustomAuthenticationStateProvider authenticationStateProvider
+
+@code {
+    [CascadingParameter] Task<AuthenticationState> authenticationStateTask { get; set; }
+
+    AuthenticationState AuthState;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        AuthState = await authenticationStateProvider.GetAuthenticationStateAsync();
+    }
+
+}
 

@@ -13,7 +13,7 @@ namespace eSaleSolution.SaleApp.Services
     {
         LoginApiResult AppUser { get; }
         Task Initialize();
-        Task Login(string username, string password);
+        Task<LoginApiResult> Login(string username, string password, bool rememberme);
         Task Logout();
     }
 
@@ -40,10 +40,11 @@ namespace eSaleSolution.SaleApp.Services
             AppUser = await _localStorageService.GetItem<LoginApiResult>("user");
         }
 
-        public async Task Login(string username, string password)
+        public async Task<LoginApiResult> Login(string username, string password, bool rememberme)
         {
-            AppUser = await _httpService.Post<LoginApiResult>("/api/users/authenticate", new { username, password });
+            AppUser = await _httpService.Post<LoginApiResult>("/api/users/authenticate", new { username, password , rememberme });
             await _localStorageService.SetItem("user", AppUser);
+            return AppUser;
         }
 
         public async Task Logout()

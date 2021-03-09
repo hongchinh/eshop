@@ -1,5 +1,6 @@
 
 using eSaleSolution.Data.Entities;
+using eSaleSolution.ViewModels.Common;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -57,10 +58,10 @@ namespace eSaleSolution.SaleApp.Services
         private async Task<T> sendRequest<T>(HttpRequestMessage request)
         {
             // add jwt auth header if user is logged in and request is to the api url
-            var ToKen = await _localStorageService.GetItem<string>("ToKen");
+            LoginApiResult ToKen =  await _localStorageService.GetItem<LoginApiResult>("user");
             var isApiUrl = !request.RequestUri.IsAbsoluteUri;
             if (ToKen != null && isApiUrl)
-                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", ToKen);
+                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", ToKen.Token);
 
             using var response = await _httpClient.SendAsync(request);
 
