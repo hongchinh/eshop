@@ -5,12 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\CustomAuthStateProvider.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Blazorise.Bootstrap" Version="0.9.3" />
     <PackageReference Include="Blazorise.Icons.FontAwesome" Version="0.9.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\eSaleSolution.ApiIntegration\eSaleSolution.ApiIntegration.csproj" />
     <ProjectReference Include="..\eSaleSolution.Data\eSaleSolution.Data.csproj" />
+    <ProjectReference Include="..\eSaleSolution.ViewModels\eSaleSolution.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

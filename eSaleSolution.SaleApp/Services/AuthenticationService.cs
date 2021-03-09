@@ -1,5 +1,6 @@
 
 using eSaleSolution.Data.Entities;
+using eSaleSolution.ViewModels.Common;
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 using System.Net.Http;
@@ -10,7 +11,7 @@ namespace eSaleSolution.SaleApp.Services
 {
     public interface IAuthenticationService
     {
-        AppUser AppUser { get; }
+        LoginApiResult AppUser { get; }
         Task Initialize();
         Task Login(string username, string password);
         Task Logout();
@@ -22,7 +23,7 @@ namespace eSaleSolution.SaleApp.Services
         private NavigationManager _navigationManager;
         private ILocalStorageService _localStorageService;
 
-        public AppUser AppUser { get; private set; }
+        public LoginApiResult AppUser { get; private set; }
 
         public AuthenticationService(
             IHttpService httpService,
@@ -36,12 +37,12 @@ namespace eSaleSolution.SaleApp.Services
 
         public async Task Initialize()
         {
-            AppUser = await _localStorageService.GetItem<AppUser>("user");
+            AppUser = await _localStorageService.GetItem<LoginApiResult>("user");
         }
 
         public async Task Login(string username, string password)
         {
-            AppUser = await _httpService.Post<AppUser>("/api/users/authenticate", new { username, password });
+            AppUser = await _httpService.Post<LoginApiResult>("/api/users/authenticate", new { username, password });
             await _localStorageService.SetItem("user", AppUser);
         }
 

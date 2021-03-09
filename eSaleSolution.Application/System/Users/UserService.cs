@@ -12,6 +12,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 
 namespace eSaleSolution.Application.System.Users
 {
@@ -33,15 +34,17 @@ namespace eSaleSolution.Application.System.Users
             _config = config;
         }
 
-        public async Task<ApiResult<string>> Authencate(LoginRequest request)
+        public async Task<LoginApiResult> Authencate(LoginRequest request)
         {
+
+
             var user = await _userManager.FindByNameAsync(request.UserName);
-            if (user == null) return new ApiErrorResult<string>("Tài khoản không tồn tại");
+            if (user == null) return new LoginApiResult { Message = "Tài khoản không tồn tại" };
 
             var result = await _signInManager.PasswordSignInAsync(user, request.Password, request.RememberMe, true);
             if (!result.Succeeded)
             {
-                return new ApiErrorResult<string>("Đăng nhập không đúng");
+                return new LoginApiResult { Message = "Đăng nhập không đúng" };
             }
             var roles = await _userManager.GetRolesAsync(user);
             var claims = new[]
@@ -60,9 +63,14 @@ namespace eSaleSolution.Application.System.Users
                 expires: DateTime.Now.AddHours(3),
                 signingCredentials: creds);
 
-            return new ApiSuccessResult<string>(new JwtSecurityTokenHandler().WriteToken(token));
+            return new LoginApiResult
+            {
+                Token = new JwtSecurityTokenHandler().WriteToken(token),
+                UserName = user.UserName,
+                Email = user.Email,
+                Id = user.Id
+            };
         }
-
         public async Task<ApiResult<bool>> Delete(Guid id)
         {
             var user = await _userManager.FindByIdAsync(id.ToString());

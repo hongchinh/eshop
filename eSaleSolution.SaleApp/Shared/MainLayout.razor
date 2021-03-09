@@ -1,4 +1,7 @@
 ﻿@inherits LayoutComponentBase
+@using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager Navigation
+
 @*<div class="page">
         <div class="sidebar">
             <NavMenu />
@@ -699,7 +702,23 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-       @Body
+        <div class="top-row px-4">
+            Name: 
+            <AuthorizeView>
+                <Authorized>
+                    <a href="/">Logout</a>
+                </Authorized>
+                <NotAuthorized>
+                    <a href="/">Login11111</a>
+                </NotAuthorized>
+            </AuthorizeView>
+
+
+            <a href="https://docs.microsoft.com/en-us/aspnet/" target="_blank">About</a>
+        </div>
+        <div class="content px-4">
+            @Body
+        </div>
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">

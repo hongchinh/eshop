@@ -43,15 +43,15 @@ namespace eSaleSolution.SaleApp
             services.AddScoped<IHttpService, HttpService>();
 
             services.AddScoped<ILocalStorageService, LocalStorageService>();
-            services.AddScoped<ILocalStorageService, LocalStorageService>();
+            
             services.AddScoped(sp => sp.GetRequiredService<IAuthenticationService>().Initialize());
             // configure http client
             services.AddScoped(x => {
                 var apiUrl = new Uri(Configuration["apiUrl"]);
                 return new HttpClient() { BaseAddress = apiUrl };
             });
-
-         
+            services.AddOptions();
+            services.AddAuthenticationCore();
 
         }
 

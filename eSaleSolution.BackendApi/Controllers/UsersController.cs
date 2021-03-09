@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using eSaleSolution.Application.System.Users;
 using eSaleSolution.ViewModels.System.Users;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,7 +29,7 @@ namespace eSaleSolution.BackendApi.Controllers
 
             var result = await _userService.Authencate(request);
 
-            if (string.IsNullOrEmpty(result.ResultObj))
+            if (string.IsNullOrEmpty(result.Token))
             {
                 return BadRequest(result);
             }

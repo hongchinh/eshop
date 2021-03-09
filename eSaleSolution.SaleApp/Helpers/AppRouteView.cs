@@ -22,7 +22,7 @@ namespace eSaleSolution.SaleApp.Helpers
             if (authorize && AuthenticationService.AppUser == null)
             {
                 var returnUrl = WebUtility.UrlEncode(new Uri(NavigationManager.Uri).PathAndQuery);
-                NavigationManager.NavigateTo($"login?returnUrl={returnUrl}");
+                NavigationManager.NavigateTo($"/login?returnUrl={returnUrl}");
             }
             else
             {
